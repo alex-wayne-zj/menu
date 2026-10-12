@@ -1,0 +1,23 @@
+.venv/
+**/node_modules/
+**/target/
+**/dist/
+**/.vite/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+*.sqlite*
+*.db*
+.env
+.env.*
+!.env.example
+config.local.json
+*.local.json
+credentials*
+test-results/
+artifacts/
+output/
+*.log
+# Internal requirement notes include actual account aliases; keep them only on VPS.
+REQUIREMENTS.md
+DESIGN.md

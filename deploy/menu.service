@@ -1,0 +1,25 @@
+[Unit]
+Description=Shiji private cooking menu API
+After=network.target
+
+[Service]
+Type=simple
+User=menu
+Group=menu
+EnvironmentFile=/etc/menu/menu.env
+WorkingDirectory=/var/lib/menu
+ExecStart=/opt/menu/current/menu-api
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/menu
+UMask=0077
+MemoryMax=256M
+TasksMax=64
+LimitNOFILE=1024
+
+[Install]
+WantedBy=multi-user.target
