@@ -9,6 +9,7 @@
 - `frontend/`：页面与随机推荐逻辑。
 - `backend/`：API、数据库初始化及资源受限的图片处理。
 - `assets/examples/`：六张 AI 示例图，生成提示词见 `PROMPTS.md`；960 px，约 138–173 KiB。
+- `frontend/public/icons/`：以“食”字设计的主屏图标；iPhone 使用 180 px PNG，manifest 入口限定 `/menu/`。已添加旧书签时如图标未更新，删除后重新添加。
 - `deploy/`：本项目 Nginx 与 systemd 配置。
 - `scripts/initialize.py`：一次性账户和示例初始化，重复运行不覆盖已有密码或菜谱。
 - `scripts/deploy.py`：串行构建、备份、部署、健康检查与回滚。
@@ -106,3 +107,9 @@ MENU_E2E_URL=https://zhangjian.dev/menu/ MENU_TEST_CREDENTIALS=/etc/menu/bootstr
 ```
 
 公开仓库仅包含源码、锁文件、部署模板、测试和 AI 示例图。实际账户、密码、邀请码、用户上传图片、数据库、备份、日志、测试截图及包含真实账户标识的内部需求/设计文档留在 VPS，不提交。
+
+手机布局回归：`node tests/ui_layout.mjs` 使用临时本机静态服务器和测试响应，在 Chromium / WebKit 的 320、375、390 和 1280 px 视口验证菜单、弹窗、购物车、饮食记录和日期字段，不访问生产账户。浏览器需用 Playwright 安装，测试结束不留常驻进程。
+
+验证线上静态产物可设置 `MENU_LAYOUT_URL=https://zhangjian.dev/menu/ node tests/ui_layout.mjs`，API 请求仍由测试响应接管，不读取或写入用户记录。
+
+图标再生成：安装 `fonts-noto-cjk` 后运行 `/opt/menu/venv/bin/python scripts/create_icon.py`，或使用已安装 Pillow 11.3.0 的项目 `.venv/bin/python`。

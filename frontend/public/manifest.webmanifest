@@ -1,0 +1,23 @@
+{
+  "name": "食记",
+  "short_name": "食记",
+  "lang": "zh-CN",
+  "start_url": "/menu/",
+  "scope": "/menu/",
+  "display": "standalone",
+  "background_color": "#f6f1e8",
+  "theme_color": "#ab4b32",
+  "icons": [
+    {
+      "src": "/menu/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/menu/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

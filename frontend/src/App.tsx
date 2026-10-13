@@ -92,7 +92,7 @@ function Modal({
         <header className="modal-head">
           <h2>{title}</h2>
           <button className="quiet" onClick={onClose} aria-label="关闭弹窗">
-            关闭 ×
+            关闭
           </button>
         </header>
         {children}
@@ -133,9 +133,7 @@ function Login({ onSuccess }: { onSuccess: (u: User) => void }) {
     <main className="login">
       <div className="brand">
         <small>今天，好好吃饭</small>
-        <h1>
-          食记<span>SHI JI</span>
-        </h1>
+        <h1>食记</h1>
         <p>留住常做的菜，选好今天这一餐。</p>
       </div>
       <form className="login-card" onSubmit={submit}>
@@ -439,12 +437,10 @@ export default function App() {
         <header className="top">
           <div className="brand">
             <small>今天，好好吃饭</small>
-            <h1>
-              食记<span>SHI JI</span>
-            </h1>
+            <h1>食记</h1>
           </div>
           <button className="account" onClick={() => open("account")}>
-            {user.username} · 账户
+            {user.username}
           </button>
         </header>
         <nav className="main-nav" aria-label="页面导航">
@@ -723,7 +719,7 @@ export default function App() {
             )}
           </>
         )}
-        <footer className="footnote">食记 · 认真吃饭，慢慢生活</footer>
+        <footer className="footnote">食记 · 认真吃饭，悠闲生活</footer>
       </div>
       <div className="cart-bar">
         <div>

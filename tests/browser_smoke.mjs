@@ -121,7 +121,7 @@ try {
   await expect(page.getByRole('dialog')).toHaveCount(0);
   createdDishes.length=0;
   await page.getByRole('button',{name:'选菜',exact:true}).click();
-  await page.getByRole('button',{name:credentials.username+' · 账户'}).click();
+  await page.getByRole('button',{name:credentials.username,exact:true}).click();
   await dialog().getByText('账户管理',{exact:true}).click();
   await expect(dialog().getByText(credentials.friend_username+' · 待注册',{exact:true})).toBeVisible();
   await close();
@@ -130,7 +130,7 @@ try {
   await page.setViewportSize({width:1280,height:900});
   await narrow();
   await page.screenshot({path:root+'artifacts/menu-desktop.png',fullPage:true});
-  await page.getByRole('button',{name:credentials.username+' · 账户'}).click();
+  await page.getByRole('button',{name:credentials.username,exact:true}).click();
   await dialog().getByRole('button',{name:'退出登录'}).click();
   await expect(page.getByRole('button',{name:'登录',exact:true})).toBeVisible();
   assert.deepEqual(errors,[],'browser JS errors');
