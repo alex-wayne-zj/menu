@@ -81,7 +81,8 @@ try {
         await noOverflow(page,`${name} ${width} record editor`);
         await close(page);
         const icon=page.locator('link[rel="apple-touch-icon"]');
-        await expect(icon).toHaveAttribute('href','/menu/icons/apple-touch-icon.png');
+        await expect(icon).toHaveAttribute('href','/menu/icons/apple-touch-icon.png?v=2');
+        assert.ok((await page.locator('.account').boundingBox()).width>=80,'username entry too narrow');
         const response=await context.request.get(new URL(await icon.getAttribute('href'),base).href);
         assert.equal(response.status(),200);
         assert.equal(response.headers()['content-type'],'image/png');

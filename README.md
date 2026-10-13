@@ -9,7 +9,7 @@
 - `frontend/`：页面与随机推荐逻辑。
 - `backend/`：API、数据库初始化及资源受限的图片处理。
 - `assets/examples/`：六张 AI 示例图，生成提示词见 `PROMPTS.md`；960 px，约 138–173 KiB。
-- `frontend/public/icons/`：以“食”字设计的主屏图标；iPhone 使用 180 px PNG，manifest 入口限定 `/menu/`。已添加旧书签时如图标未更新，删除后重新添加。
+- `frontend/public/icons/`：暖红底、单个浅色行书“食”字的主屏图标，无边框或下划线；iPhone 使用 180 px PNG，manifest 入口限定 `/menu/`。已添加旧书签时如图标未更新，删除后重新添加。
 - `deploy/`：本项目 Nginx 与 systemd 配置。
 - `scripts/initialize.py`：一次性账户和示例初始化，重复运行不覆盖已有密码或菜谱。
 - `scripts/deploy.py`：串行构建、备份、部署、健康检查与回滚。
@@ -112,4 +112,4 @@ MENU_E2E_URL=https://zhangjian.dev/menu/ MENU_TEST_CREDENTIALS=/etc/menu/bootstr
 
 验证线上静态产物可设置 `MENU_LAYOUT_URL=https://zhangjian.dev/menu/ node tests/ui_layout.mjs`，API 请求仍由测试响应接管，不读取或写入用户记录。
 
-图标再生成：安装 `fonts-noto-cjk` 后运行 `/opt/menu/venv/bin/python scripts/create_icon.py`，或使用已安装 Pillow 11.3.0 的项目 `.venv/bin/python`。
+图标尺寸再生成：运行 `/opt/menu/venv/bin/python scripts/create_icon.py`，或使用已安装 Pillow 11.3.0 的项目 `.venv/bin/python`；脚本从 `assets/app-icon/calligraphy-source.png` 原稿缩放，无需安装字体。生成提示词见同目录说明。
