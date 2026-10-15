@@ -1,0 +1,15 @@
+[
+  {"slug":"sizzling-ribs","name":"蒜香煸炒排骨","original":"炒排骨","category":"肉菜","kind":"meat","ingredients":"排骨 400 g、蒜 5 瓣、姜 3 片、青椒 1 个、生抽 1 勺、料酒 1 勺、盐和食用油适量。","notes":"排骨焯水后沥干，煸香姜蒜后下锅翻炒，加少量水焖至熟透，再放青椒收汁。"},
+  {"slug":"pepper-pork","name":"湘味椒香小炒肉","original":"小炒肉","category":"肉菜","kind":"meat","ingredients":"五花肉 250 g、青椒 3 个、蒜 3 瓣、生抽 1 勺、豆豉少许、盐和食用油适量。","notes":"五花肉切薄片煸出油，加入蒜和豆豉炒香，放青椒大火翻炒；辣度按口味调整。"},
+  {"slug":"tender-beef","name":"黑椒滑炒牛肉","original":"炒牛肉","category":"肉菜","kind":"meat","ingredients":"牛肉 250 g、青椒 1 个、洋葱半个、黑胡椒、生抽 1 勺、淀粉 1 小勺、盐和食用油适量。","notes":"牛肉逆纹切片，加生抽、淀粉和少许油腌制，再与洋葱青椒快炒至熟。"},
+  {"slug":"garlic-shrimp","name":"蒜香清炒虾仁","original":"炒虾仁","category":"海鲜","kind":"meat","ingredients":"虾仁 250 g、蒜 3 瓣、姜 2 片、葱花少许、料酒 1 小勺、盐和食用油适量。","notes":"虾仁去虾线后擦干，姜蒜炒香后下锅快炒，炒至完全变色熟透。"},
+  {"slug":"chicken-breast","name":"青椒嫩炒鸡胸","original":"炒鸡胸肉","category":"肉菜","kind":"meat","ingredients":"鸡胸肉 250 g、青椒 2 个、蒜 2 瓣、生抽 1 勺、淀粉 1 小勺、盐和食用油适量。","notes":"鸡胸肉切片，加生抽和淀粉腌制，先炒肉再放青椒，翻炒至鸡肉完全熟透。"},
+  {"slug":"chicken-thigh","name":"姜葱爆炒鸡腿肉","original":"炒鸡腿肉","category":"肉菜","kind":"meat","ingredients":"去骨鸡腿肉 300 g、姜 4 片、葱 2 根、蒜 2 瓣、生抽 1 勺、料酒 1 勺、盐和食用油适量。","notes":"鸡腿肉切块擦干，煸香姜蒜后炒鸡肉，炒至熟透，最后加入葱段。"},
+  {"slug":"linyi-chicken","name":"沂蒙风味临沂炒鸡","original":"临沂炒鸡","category":"肉菜","kind":"meat","ingredients":"带骨鸡块 500 g、青椒 2 个、姜 6 片、蒜 5 瓣、葱半根、花椒和八角少许、生抽 1 勺、老抽少许、盐和食用油适量。","notes":"鸡块沥干后用姜蒜和香料煸炒，调味后加适量热水焖至熟透，加入青椒收汁。"},
+  {"slug":"sunny-eggs","name":"金边香煎荷包蛋","original":"煎荷包蛋","category":"蛋类","kind":"other","ingredients":"鸡蛋 2 个、盐少许、食用油适量。","notes":"热锅下油，打入鸡蛋中小火煎至边缘金黄；翻面或加盖，将蛋白和蛋黄煎至凝固。"},
+  {"slug":"golden-wings","name":"焦香蒜味煎中翅","original":"煎鸡中翅","category":"肉菜","kind":"meat","ingredients":"鸡中翅 6 个、蒜 4 瓣、生抽 1 勺、料酒 1 勺、黑胡椒少许、盐和食用油适量。","notes":"中翅划刀后加调料腌制，小火煎至两面金黄、内部熟透，蒜末后放以免焦苦。"},
+  {"slug":"blanched-broccoli","name":"清水碧绿西兰花","original":"水煮西兰花","category":"蔬菜","kind":"vegetable","ingredients":"西兰花 1 颗、清水适量、盐少许。","notes":"西兰花切小朵洗净，沸水中煮至熟而脆嫩，沥水后撒少许盐，不额外放油。"},
+  {"slug":"blanched-spinach","name":"清鲜水煮菠菜","original":"水煮菠菜","category":"蔬菜","kind":"vegetable","ingredients":"菠菜 300 g、清水适量、盐少许。","notes":"菠菜择洗干净，沸水煮熟后捞出沥水，弃去煮菜水，按口味加少许盐。"},
+  {"slug":"wok-cucumber","name":"蒜香脆炒黄瓜","original":"小炒黄瓜","category":"蔬菜","kind":"vegetable","ingredients":"黄瓜 2 根、蒜 3 瓣、盐和食用油适量。","notes":"黄瓜切片，蒜末炒香后加入黄瓜大火快炒，断生即出锅，保留清脆口感。"},
+  {"slug":"carrot-sausage","name":"胡萝卜火腿肠小炒","original":"胡萝卜炒火腿肠","category":"肉菜","kind":"meat","ingredients":"胡萝卜 1 根、火腿肠 2 根、蒜 2 瓣、生抽半勺、盐和食用油适量。","notes":"胡萝卜和火腿肠切片，先炒胡萝卜至熟软，再加入火腿肠和蒜翻炒调味。"}
+]

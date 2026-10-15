@@ -9,6 +9,7 @@
 - `frontend/`：页面与随机推荐逻辑。
 - `backend/`：API、数据库初始化及资源受限的图片处理。
 - `assets/examples/`：六张 AI 示例图，生成提示词见 `PROMPTS.md`；960 px，约 138–173 KiB。
+- `assets/everyday/`：13 道常吃菜、配料及独立 AI 配图，768 px WebP，每张低于 100000 字节；提示词见同目录 `PROMPTS.md`。
 - `frontend/public/icons/`：暖红底、单个浅色行书“食”字的主屏图标，无边框或下划线；iPhone 使用 180 px PNG，manifest 入口限定 `/menu/`。已添加旧书签时如图标未更新，删除后重新添加。
 - `deploy/`：本项目 Nginx 与 systemd 配置。
 - `scripts/initialize.py`：一次性账户和示例初始化，重复运行不覆盖已有密码或菜谱。
@@ -75,6 +76,16 @@ python3 scripts/deploy.py --rollback
 失败时恢复本次触及的 Nginx、systemd 配置和前一产物。手动 `--rollback` 只切换兼容的代码产物，保留当前数据；未来涉及不兼容迁移时须制定独立迁移与数据恢复方案，不可盲目回滚。初始版本只有建表操作，没有既有数据迁移。
 
 需恢复数据时先停 `menu`，将选定备份解压到隔离目录确认，再替换数据库及图片；保留原数据另存备份，删除旧 WAL/SHM 前确认没有进程使用数据库；校正 `menu:menu` 所有权后启动并验证。不在运行中直接覆盖 SQLite 文件。
+
+为指定已有账户导入常吃菜（默认只预览；`--replace` 替换该账户全部菜谱，需确认范围）：
+
+```sh
+python3 scripts/import_dishes.py --username ACCOUNT --manifest assets/everyday/dishes.json --replace
+python3 scripts/deploy.py --backup
+python3 scripts/import_dishes.py --username ACCOUNT --manifest assets/everyday/dishes.json --replace --apply
+```
+
+只改菜品数据和图片，无需构建或重启。导入在一个 SQLite 事务中提交，保留其他账户和饮食记录；不删除旧图片。需撤销时使用导入前备份恢复数据，代码 `--rollback` 不会撤销菜单变更。
 
 ## 资源与安全边界
 
